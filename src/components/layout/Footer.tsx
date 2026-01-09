@@ -1,4 +1,5 @@
-import { Sparkles, Mail, Globe } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
+import cosmiqLogo from "@/assets/cosmiq-logo.png";
 
 export const Footer = () => {
   return (
@@ -7,10 +8,7 @@ export const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
           {/* Logo */}
           <div className="flex items-center gap-2">
-            <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-cosmic-gold to-cosmic-gold-glow flex items-center justify-center">
-              <Sparkles className="w-4 h-4 text-primary-foreground" />
-            </div>
-            <span className="font-display text-xl text-gradient-gold">COSMIQ</span>
+            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-6 invert" />
           </div>
 
           {/* Contact */}
