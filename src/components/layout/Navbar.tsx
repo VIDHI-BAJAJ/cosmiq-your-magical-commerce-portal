@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { CosmicButton } from "@/components/ui/CosmicButton";
 import { Sparkles, Menu, X } from "lucide-react";
+import cosmiqLogo from "@/assets/cosmiq-logo.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -32,10 +33,7 @@ export const Navbar = () => {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-cosmic-gold to-cosmic-gold-glow flex items-center justify-center">
-              <Sparkles className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="font-display text-2xl text-gradient-gold">COSMIQ</span>
+            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-8 invert" />
           </motion.a>
 
           {/* Desktop Navigation */}
