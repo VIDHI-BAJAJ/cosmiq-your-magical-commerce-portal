@@ -33,7 +33,7 @@ export const Navbar = () => {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-8 invert" />
+            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-10 invert" />
           </motion.a>
 
           {/* Desktop Navigation */}
