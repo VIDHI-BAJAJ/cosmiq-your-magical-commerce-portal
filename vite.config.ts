@@ -1,13 +1,10 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react-swc";
+import react from "@vitejs/plugin-react";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
-export default defineConfig(({ mode }) => ({
-  base:
-    mode === "production"
-      ? "/cosmiq-your-magical-commerce-portal/"
-      : "/",
+export default defineConfig(() => ({
+  base: "/", // ✅ REQUIRED for custom domain
 
   server: {
     host: "localhost",
@@ -16,7 +13,7 @@ export default defineConfig(({ mode }) => ({
 
   plugins: [
     react(),
-    mode === "development" && componentTagger(),
+    componentTagger(),
   ].filter(Boolean),
 
   resolve: {
