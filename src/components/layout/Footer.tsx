@@ -1,9 +1,10 @@
+
 import { Mail, Globe } from "lucide-react";
 import cosmiqLogo from "@/assets/cosmiqbglogo.png";
 
 export const Footer = () => {
   return (
-    
+
     <footer className="relative py-16 border-t border-border/30">
       <div className="container px-4">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">

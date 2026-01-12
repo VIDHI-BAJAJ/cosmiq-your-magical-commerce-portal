@@ -86,6 +86,7 @@ export const Navbar = () => {
   );
 };
 
+
 const NavLink = ({ href, children, mobile = false }: { href: string; children: React.ReactNode; mobile?: boolean }) => (
   <a
     href={href}

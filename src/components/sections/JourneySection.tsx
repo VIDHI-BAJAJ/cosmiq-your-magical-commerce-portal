@@ -104,6 +104,7 @@ export const JourneySection = () => {
                   </div>
                 </div>
 
+
                 {/* Timeline Node */}
                 <motion.div
                   className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"

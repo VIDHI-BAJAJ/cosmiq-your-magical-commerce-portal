@@ -78,6 +78,7 @@ export const TestimonialsSection = () => {
                   "{testimonial.quote}"
                 </p>
 
+
                 {/* Author */}
                 <div className="flex items-center gap-4 mt-auto">
                   <div className="w-12 h-12 rounded-full bg-gradient-to-br from-cosmic-amethyst/30 to-cosmic-gold/30 flex items-center justify-center text-2xl">
