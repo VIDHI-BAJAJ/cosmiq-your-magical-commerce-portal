@@ -68,7 +68,7 @@ export const HeroSection = () => {
               Cosmiq is your spiritual commerce engine — we build and manage your digital shop so you can focus on guiding souls.
             </motion.p>
 
-          <motion.div
+            <motion.div
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ delay: 0.7, duration: 0.8 }}
@@ -91,6 +91,8 @@ export const HeroSection = () => {
   </CosmicButton> 
   */}
 </motion.div>
+
+          </motion.div>
 
           {/* Hero Image */}
           <motion.div
