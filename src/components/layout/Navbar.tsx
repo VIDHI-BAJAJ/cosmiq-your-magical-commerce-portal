@@ -44,13 +44,19 @@ export const Navbar = () => {
           </div>
 
           {/* CTA Button */}
-          <div className="hidden md:block">
-            <CosmicButton variant="primary" size="default">
-              <Sparkles className="w-4 h-4" />
-              Get Started
-            </CosmicButton>
-          </div>
-
+         <div className="hidden md:block">
+  <CosmicButton variant="primary" size="default" asChild>
+    <a
+      href="https://calendly.com/cosmiq-official/discovery"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center gap-2"
+    >
+      <Sparkles className="w-4 h-4" />
+      Get Started
+    </a>
+  </CosmicButton>
+</div>
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 text-foreground"
@@ -72,19 +78,25 @@ export const Navbar = () => {
               <NavLink href="#how-it-works" mobile>How It Works</NavLink>
               <NavLink href="#journey" mobile>The Journey</NavLink>
               <NavLink href="#testimonials" mobile>Testimonials</NavLink>
-              <div className="pt-4">
-  <a
-    href="https://calendly.com/cosmiq-official/discovery"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="block w-full"
+          <div className="pt-4">
+  <CosmicButton
+    variant="primary"
+    size="lg"
+    className="w-full"
+    asChild
   >
-    <CosmicButton variant="primary" size="lg" className="w-full">
+    <a
+      href="https://calendly.com/cosmiq-official/discovery"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="flex items-center justify-center gap-2 w-full"
+    >
       <Sparkles className="w-4 h-4" />
       Get Started
-    </CosmicButton>
-  </a>
+    </a>
+  </CosmicButton>
 </div>
+
             </div>
           </motion.div>
         )}
