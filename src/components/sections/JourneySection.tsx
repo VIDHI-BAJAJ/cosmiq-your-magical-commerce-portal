@@ -16,7 +16,7 @@ const journeySteps = [
     phase: "Waxing Moon",
     title: "Pilot Launch",
     subtitle: "Month 2-3",
-    description: "Your store launches with Cosmiq-sourced products to test the sales funnel. First 2 months completely FREE.",
+    description: "Your store launches with Cosmiq-sourced products to test the sales funnel.",
     icon: Rocket,
     highlight: "Risk-free launch period",
   },
@@ -24,7 +24,7 @@ const journeySteps = [
     phase: "Full Moon",
     title: "Expand",
     subtitle: "Month 3+",
-    description: "Scale with your own sacred products. Flat ₹5,000/month covers all ongoing tech and platform costs.",
+    description: "Scale with your own sacred products.",
     icon: Crown,
     highlight: "Your thriving spiritual shop",
   },
@@ -70,30 +70,23 @@ export const JourneySection = () => {
 
         {/* Timeline */}
         <div className="relative max-w-4xl mx-auto">
-          {/* Connecting Line - Mobile/Tablet: left side, Desktop: center */}
-          <div className="absolute left-4 sm:left-6 lg:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cosmic-amethyst/50 via-cosmic-gold/50 to-cosmic-portal/50" />
+          {/* Connecting Line */}
+          <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cosmic-amethyst/50 via-cosmic-gold/50 to-cosmic-portal/50" />
 
-          <div className="space-y-8 lg:space-y-0">
+          <div className="space-y-12 lg:space-y-0">
             {journeySteps.map((step, index) => (
               <motion.div
                 key={step.title}
                 initial={{ opacity: 0, y: 40 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.8, delay: 0.2 + index * 0.2 }}
-                className="relative pl-12 sm:pl-16 lg:pl-0 lg:grid lg:grid-cols-2 lg:gap-12"
+                className={`relative lg:grid lg:grid-cols-2 lg:gap-12 ${
+                  index % 2 === 1 ? "lg:direction-rtl" : ""
+                }`}
               >
-                {/* Timeline Node - Mobile/Tablet: left side */}
-                <motion.div
-                  className="lg:hidden absolute left-2 sm:left-4 top-8 flex items-center justify-center"
-                  animate={{ scale: [1, 1.2, 1] }}
-                  transition={{ duration: 2, repeat: Infinity, delay: index * 0.3 }}
-                >
-                  <div className="w-4 h-4 rounded-full bg-cosmic-gold glow-gold" />
-                </motion.div>
-
                 {/* Content */}
-                <div className={`${index % 2 === 0 ? "lg:text-right lg:pr-12" : "lg:text-left lg:pl-12 lg:col-start-2"}`}>
-                  <div className={`card-mystical p-5 sm:p-6 lg:p-8 ${index % 2 === 0 ? "lg:ml-auto" : ""} max-w-md border-cosmic-gold/20`}>
+                <div className={`lg:${index % 2 === 0 ? "text-right pr-12" : "text-left pl-12 col-start-2"}`}>
+                  <div className={`card-mystical p-6 sm:p-8 ${index % 2 === 0 ? "lg:ml-auto" : ""} max-w-md border-cosmic-gold/20`}>
                     <div className="flex items-center gap-3 mb-4">
                       <div className="p-2 rounded-lg bg-cosmic-gold/10">
                         <step.icon className="w-5 h-5 text-cosmic-gold" />
@@ -101,17 +94,17 @@ export const JourneySection = () => {
                       <span className="text-xs text-cosmic-amethyst-light uppercase tracking-wider">{step.phase}</span>
                     </div>
                     
-                    <h3 className="font-display text-xl sm:text-2xl text-foreground mb-1">{step.title}</h3>
-                    <p className="text-sm text-cosmic-gold mb-3 sm:mb-4">{step.subtitle}</p>
-                    <p className="text-sm sm:text-base text-muted-foreground mb-3 sm:mb-4">{step.description}</p>
+                    <h3 className="font-display text-2xl text-foreground mb-1">{step.title}</h3>
+                    <p className="text-sm text-cosmic-gold mb-4">{step.subtitle}</p>
+                    <p className="text-muted-foreground mb-4">{step.description}</p>
                     
                     <div className="inline-block px-3 py-1.5 rounded-full bg-cosmic-gold/10 border border-cosmic-gold/20">
-                      <span className="text-xs sm:text-sm text-cosmic-gold">{step.highlight}</span>
+                      <span className="text-sm text-cosmic-gold">{step.highlight}</span>
                     </div>
                   </div>
                 </div>
 
-                {/* Timeline Node - Desktop: center */}
+                {/* Timeline Node */}
                 <motion.div
                   className="hidden lg:flex absolute left-1/2 -translate-x-1/2 items-center justify-center"
                   style={{ top: index === 0 ? "2rem" : index === 1 ? "50%" : "calc(100% - 2rem)" }}

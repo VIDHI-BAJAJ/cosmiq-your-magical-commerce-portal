@@ -111,7 +111,7 @@ export const TransformationSection = () => {
         </div>
 
         {/* Decorative Arrow */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -120,7 +120,7 @@ export const TransformationSection = () => {
           <div className="w-20 h-20 rounded-full bg-gradient-to-br from-cosmic-amethyst/20 to-cosmic-gold/20 border border-cosmic-gold/30 flex items-center justify-center backdrop-blur-sm">
             <Sparkles className="w-8 h-8 text-cosmic-gold" />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );

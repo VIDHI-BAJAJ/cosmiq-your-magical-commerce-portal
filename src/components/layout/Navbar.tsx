@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { CosmicButton } from "@/components/ui/CosmicButton";
 import { Sparkles, Menu, X } from "lucide-react";
-import cosmiqLogo from "@/assets/cosmiq-logo.png";
+import cosmiqLogo from "@/assets/cosmiqbglogo.png";
 
 export const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -33,7 +33,7 @@ export const Navbar = () => {
             className="flex items-center gap-2"
             whileHover={{ scale: 1.02 }}
           >
-            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-10 invert" />
+            <img src={cosmiqLogo} alt="Cosmiq Logo" className="h-5  invert" />
           </motion.a>
 
           {/* Desktop Navigation */}

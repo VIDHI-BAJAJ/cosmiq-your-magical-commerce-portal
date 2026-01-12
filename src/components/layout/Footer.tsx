@@ -1,5 +1,5 @@
 import { Mail, Globe } from "lucide-react";
-import cosmiqLogo from "@/assets/cosmiq-logo.png";
+import cosmiqLogo from "@/assets/cosmiqbglogo.png";
 
 export const Footer = () => {
   return (

@@ -6,22 +6,22 @@ import { Star, Quote } from "lucide-react";
 const testimonials = [
   {
     quote: "Cosmiq turned my vision into reality — I just show up and shine. My followers finally have a sacred space to shop.",
-    name: "Mystic Luna",
+    name: "Dr.MMalvikaa",
     title: "Astrologer & Tarot Reader",
     avatar: "🌙",
   },
-  {
-    quote: "I was drowning in tech setup and shipping nightmares. Now I create content while Cosmiq handles everything else.",
-    name: "Sacred Sophia",
-    title: "Energy Healer",
-    avatar: "✨",
-  },
-  {
-    quote: "The partnership feels like true alchemy. They understand spiritual creators in a way no other platform does.",
-    name: "Cosmic Crystal",
-    title: "Crystal Guide",
-    avatar: "💎",
-  },
+  // {
+  //   quote: "I was drowning in tech setup and shipping nightmares. Now I create content while Cosmiq handles everything else.",
+  //   name: "Sacred Sophia",
+  //   title: "Energy Healer",
+  //   avatar: "✨",
+  // },
+  // {
+  //   quote: "The partnership feels like true alchemy. They understand spiritual creators in a way no other platform does.",
+  //   name: "Cosmic Crystal",
+  //   title: "Crystal Guide",
+  //   avatar: "💎",
+  // },
 ];
 
 export const TestimonialsSection = () => {
@@ -50,7 +50,8 @@ export const TestimonialsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+        {/* <div className="grid md:grid-cols-3 gap-6 lg:gap-8"> */}
+        <div className="grid">
           {testimonials.map((testimonial, index) => (
             <motion.div
               key={testimonial.name}

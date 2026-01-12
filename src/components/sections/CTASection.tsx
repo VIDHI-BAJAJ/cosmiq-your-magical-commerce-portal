@@ -79,14 +79,14 @@ export const CTASection = () => {
             </CosmicButton>
           </motion.div>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0 }}
             animate={isInView ? { opacity: 1 } : {}}
             transition={{ duration: 0.8, delay: 0.7 }}
             className="mt-8 text-sm text-muted-foreground"
           >
             First 2 months completely FREE • No tech skills required
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </div>
     </section>

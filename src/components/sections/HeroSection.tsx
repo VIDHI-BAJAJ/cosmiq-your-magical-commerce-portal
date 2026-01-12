@@ -6,7 +6,7 @@ import heroPortal from "@/assets/hero-portal.jpg";
 
 export const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-6 py-5">
       {/* Background */}
       <div className="absolute inset-0 gradient-hero" />
       <StarField count={80} />
@@ -73,13 +73,13 @@ export const HeroSection = () => {
               transition={{ delay: 0.7, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
-              <CosmicButton variant="primary" size="xl">
+              <CosmicButton variant="primary" size="xl" className="ml-3">
                 <Sparkles className="w-5 h-5" />
-                Open the Portal
+                Get Started
               </CosmicButton>
-              <CosmicButton variant="secondary" size="xl">
+              {/* <CosmicButton variant="secondary" size="xl">
                 Learn the Alchemy
-              </CosmicButton>
+              </CosmicButton> */}
             </motion.div>
           </motion.div>
 
