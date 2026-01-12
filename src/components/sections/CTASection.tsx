@@ -68,17 +68,23 @@ export const CTASection = () => {
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-            className="flex flex-col sm:flex-row gap-4 justify-center"
-          >
-            <CosmicButton variant="primary" size="xl">
-              <Sparkles className="w-5 h-5" />
-              Summon Your Store
-              <ArrowRight className="w-5 h-5" />
-            </CosmicButton>
-          </motion.div>
+  initial={{ opacity: 0, y: 20 }}
+  animate={isInView ? { opacity: 1, y: 0 } : {}}
+  transition={{ duration: 0.8, delay: 0.5 }}
+  className="flex flex-col sm:flex-row gap-4 justify-center"
+>
+  <a
+    href="https://calendly.com/cosmiq-official/discovery"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <CosmicButton variant="primary" size="xl">
+      <Sparkles className="w-5 h-5" />
+      Summon Your Store
+      <ArrowRight className="w-5 h-5" />
+    </CosmicButton>
+  </a>
+</motion.div>
 
           {/* <motion.p
             initial={{ opacity: 0 }}

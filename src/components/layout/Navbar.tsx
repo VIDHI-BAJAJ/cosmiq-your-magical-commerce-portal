@@ -73,11 +73,18 @@ export const Navbar = () => {
               <NavLink href="#journey" mobile>The Journey</NavLink>
               <NavLink href="#testimonials" mobile>Testimonials</NavLink>
               <div className="pt-4">
-                <CosmicButton variant="primary" size="lg" className="w-full">
-                  <Sparkles className="w-4 h-4" />
-                  Get Started
-                </CosmicButton>
-              </div>
+  <a
+    href="https://calendly.com/cosmiq-official/discovery"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block w-full"
+  >
+    <CosmicButton variant="primary" size="lg" className="w-full">
+      <Sparkles className="w-4 h-4" />
+      Get Started
+    </CosmicButton>
+  </a>
+</div>
             </div>
           </motion.div>
         )}
