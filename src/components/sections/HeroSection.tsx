@@ -68,21 +68,29 @@ export const HeroSection = () => {
               Cosmiq is your spiritual commerce engine — we build and manage your digital shop so you can focus on guiding souls.
             </motion.p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.7, duration: 0.8 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <CosmicButton variant="primary" size="xl" className="ml-3">
-                <Sparkles className="w-5 h-5" />
-                Get Started
-              </CosmicButton>
-              {/* <CosmicButton variant="secondary" size="xl">
-                Learn the Alchemy
-              </CosmicButton> */}
-            </motion.div>
-          </motion.div>
+          <motion.div
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.7, duration: 0.8 }}
+  className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+>
+  <a
+    href="https://calendly.com/cosmiq-official/discovery"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    <CosmicButton variant="primary" size="xl" className="ml-3">
+      <Sparkles className="w-5 h-5" />
+      Get Started
+    </CosmicButton>
+  </a>
+
+  {/* 
+  <CosmicButton variant="secondary" size="xl">
+    Learn the Alchemy
+  </CosmicButton> 
+  */}
+</motion.div>
 
           {/* Hero Image */}
           <motion.div
